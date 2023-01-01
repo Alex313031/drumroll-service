@@ -1,4 +1,4 @@
-# drumroll-service &nbsp;<img src="https://raw.githubusercontent.com/Alex313031/drumroll-service/main/drumroll_win98.gif" width="32">
+# drumroll-service &nbsp;<img src="https://raw.githubusercontent.com/Alex313031/drumroll-service/main/drumroll_win98.gif" width="36">
 
 Simply a package that installs a systemd service to play the Ubuntu startup sound, which was the default from 4.04 until 17.10.
 Note this is __*NOT*__ a "login sound", which is easy to do, and when I googled how to restore the __boot__ sound, all I found was how to play a sound *after* one logs in, UNTIL I finally came across this > https://askubuntu.com/questions/973680/how-to-bring-back-drum-roll-sound-in-ubuntu-17-10-when-system-is-ready-for-user/1050000
