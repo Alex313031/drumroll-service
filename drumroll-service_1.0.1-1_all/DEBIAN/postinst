@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Copyright (c) 2022 Alex313031. All rights reserved.
+
+set -e
+
+# Set drumroll.service to start automatically when systemd gdm user session is started.
+ln -sf /var/lib/gdm3/.config/systemd/user/drumroll.service /var/lib/gdm3/.config/systemd/user/default.target.wants/drumroll.service
+chown gdm:gdm /var/lib/gdm3/.config/systemd/user/drumroll.service
+chown gdm:gdm /var/lib/gdm3/.config/systemd/user/default.target.wants
+
+# Update cache of .desktop file MIME types. Non-fatal since it's just a cache.
+update-desktop-database > /dev/null 2>&1 || true
