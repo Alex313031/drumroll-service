@@ -10,7 +10,8 @@ Sooooo.... here ya'll go. Long Live Ubuntu!
 ## Building
 
 Simply run `./build.sh` \
-Install with `sudo dpkg --install *name of file*`
+Install with `sudo dpkg --install *name of file*` \
+It depends on pulseaudio-utils, libasound2, ubuntu-sounds, and libcanberra-gtk-module (the first two should already be installed).
 
 ### Note
 
