@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Copyright (c) 2022 Alex313031. All rights reserved.
+
+set -e
+
+# Delete drumroll.service symlink.
+rm -f -v /var/lib/gdm3/.config/systemd/user/default.target.wants/drumroll.service
