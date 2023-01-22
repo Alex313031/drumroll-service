@@ -1,0 +1,12 @@
+[Unit]
+Description=Drumroll
+Requires=pulseaudio.socket
+After=systemd-user-sessions.service
+
+[Service]
+Type=simple
+Restart=no
+ExecStart=/usr/bin/paplay -p /usr/share/sounds/Yaru/stereo/system-ready.oga
+
+[Install]
+WantedBy=default.target
