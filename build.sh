@@ -22,6 +22,10 @@ displayHelp () {
 	printf "\n"
 }
 
-dpkg-deb -Zgzip --build --root-owner-group drumroll-service_1.0.1-1_all
+dpkg-deb -Zgzip --build --root-owner-group drumroll-service_1.0.2-18.04_all &&
+
+dpkg-deb -Zgzip --build --root-owner-group drumroll-service_1.0.2-20.04_all &&
+
+dpkg-deb -Zgzip --build --root-owner-group drumroll-service_1.0.2-22.10_all
 
 exit 0
