@@ -100,7 +100,7 @@ installBionic () {
 	tput sgr0 &&
 	
 	cd &&
-	sudo apt install python-docutils python-setuptools python-smbus python3-smbus i965-va-driver-shaders dconf-tools exfat-utils gnome-tweak-tool inteltool rarian-compat vdpau-va-driver libatk-adaptor libgail-common gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-utils libarchive-cpio-perl gnome-mime-data sse3-support exo &&
+	sudo apt install python-docutils python-setuptools python-smbus python3-smbus i965-va-driver-shaders dconf-tools exfat-utils gnome-tweak-tool inteltool rarian-compat vdpau-va-driver libatk-adaptor libgail-common gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-utils libarchive-cpio-perl gnome-mime-data sse3-support &&
 	
 	printf "\n" &&
 	printf "${GRE}Done!\n" &&
