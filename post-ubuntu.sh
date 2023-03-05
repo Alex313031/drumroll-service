@@ -118,7 +118,7 @@ installFocal () {
 	tput sgr0 &&
 	
 	cd &&
-	sudo apt install intel-media-va-driver-non-free libappimage0 libappimage-dev exfat-utils mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support exo &&
+	sudo apt install intel-media-va-driver-non-free libappimage0 libappimage-dev exfat-utils mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support &&
 	
 	printf "\n" &&
 	printf "${GRE}Done!\n" &&
