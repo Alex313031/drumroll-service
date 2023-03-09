@@ -27,6 +27,7 @@ displayHelp () {
 	printf "${bold}${YEL}  --bionic | Ubuntu 18.04, Codename \"Bionic Beaver\"${c0}\n" &&
 	printf "${bold}${YEL}  --focal  | Ubuntu 20.04, Codename \"Focal Fossa\"${c0}\n" &&
 	printf "${bold}${YEL}  --jammy  | Ubuntu 22.04, Codename \"Jammy Jellyfish\"${c0}\n" &&
+	printf "${bold}${YEL}--lunar (Ubuntu 23.04, Codename \"Lunar Lobster\".${c0}\n" &&
 	printf "\n"
 }
 
@@ -144,6 +145,24 @@ installJammy () {
 	tput sgr0
 }
 
+# --lunar
+installLunar () {
+	printf "\n" &&
+	printf "${bold}${GRE}Installing specific packages for Ubuntu 23.04, Codename \"Lunar Lobster\".${c0}\n" &&
+	printf "${bold}\n" &&
+	read -p "Press Enter to continue, Ctrl + C to abort." &&
+	printf "${c0}\n" &&
+	tput sgr0 &&
+	
+	cd &&
+	sudo apt install intel-media-va-driver-non-free libappimage1.0abi1 libappimage-dev exfatprogs mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-2-dev &&
+	
+	printf "\n" &&
+	printf "${GRE}Done!\n" &&
+	printf "\n" &&
+	tput sgr0
+}
+
 # Post Install
 postInstall () {
 	c0='\033[0m' # Reset Text
@@ -207,6 +226,10 @@ case $1 in
 esac
 
 case $1 in
+	--lunar) installCommon; installLunar; postInstall; exit 0;;
+esac
+
+case $1 in
 	--logo) postInstall; exit 0;;
 esac
 
@@ -219,6 +242,7 @@ printf "${bold}${YEL}--xenial (Ubuntu 16.04, Codename \"Xenial Xerus\".${c0}\n" 
 printf "${bold}${YEL}--bionic (Ubuntu 18.04, Codename \"Bionic Beaver\".${c0}\n" &&
 printf "${bold}${YEL}--focal (Ubuntu 20.04, Codename \"Focal Fossa\".${c0}\n" &&
 printf "${bold}${YEL}--jammy (Ubuntu 22.04, Codename \"Jammy Jellyfish\".${c0}\n" &&
+printf "${bold}${YEL}--lunar (Ubuntu 23.04, Codename \"Lunar Lobster\".${c0}\n" &&
 printf "\n"
 
 exit 0
