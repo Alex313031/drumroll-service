@@ -26,6 +26,8 @@ dpkg-deb -Zgzip --build --root-owner-group drumroll-service_1.0.2-18.04_all &&
 
 dpkg-deb -Zgzip --build --root-owner-group drumroll-service_1.0.2-20.04_all &&
 
-dpkg-deb -Zgzip --build --root-owner-group drumroll-service_1.0.2-22.10_all
+dpkg-deb -Zgzip --build --root-owner-group drumroll-service_1.0.2-22.10_all &&
+
+dpkg-deb -Zgzip --build --root-owner-group python-is-python2
 
 exit 0

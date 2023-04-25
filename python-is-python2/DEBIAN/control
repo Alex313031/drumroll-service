@@ -1,0 +1,33 @@
+Package: python-is-python2
+Source: what-is-python (4)
+Version: 2.7.18-1
+Architecture: all
+Maintainer: Alexander Frick <Alex313031@ubuntu.com>
+Installed-Size: 12
+Depends: python2
+Breaks: python, python-is-python2-but-deprecated, python-is-python3
+Replaces: python, python-is-python2-but-deprecated, python-is-python3
+Provides: python (= 2.7.18-1)
+Section: oldlibs
+Priority: optional
+Multi-Arch: allowed
+Description: symlinks /usr/bin/python to the DEPRECATED python2
+ In Ubuntu, all python packages use explicit python3 or python2
+ interpreter and do not use unversioned /usr/bin/python at all. Some
+ third-party code may still be python2 based, yet may use
+ /usr/bin/python.
+ .
+ This is a convenience package which ships a symlink to point
+ /usr/bin/python interpreter at the current default python2. It may
+ improve compatibility with obsolete 3rd-party software, whilst
+ breaking some modern software.
+ .
+ This package will be installed upon upgrades to Ubuntu 20.04, if
+ DEPRECATED python2 was installed.
+ .
+ python2 is DEPRECATED and will not be provided in the future Ubuntu
+ release. It is recommended to remove python2 and this package after
+ ensuring that only python3 is in use.
+ .
+ No packages may declare dependencies on this package.
+Cnf-Ignore-Commands: python
