@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright (c) 2022 Alex313031 and Midzer and Julianna.
+# Copyright (c) 2024 Alex313031 and Midzer and Julianna.
 
 YEL='\033[1;33m' # Yellow
 CYA='\033[1;96m' # Cyan
@@ -28,6 +28,7 @@ displayHelp () {
 	printf "${bold}${YEL}  --focal  | Ubuntu 20.04, Codename \"Focal Fossa\"${c0}\n" &&
 	printf "${bold}${YEL}  --jammy  | Ubuntu 22.04, Codename \"Jammy Jellyfish\"${c0}\n" &&
 	printf "${bold}${YEL}  --lunar (Ubuntu 23.04, Codename \"Lunar Lobster\".${c0}\n" &&
+	printf "${bold}${YEL}  --debian (Debian 12.1, Codename \"Bookworm\".${c0}\n" &&
 	printf "\n"
 }
 
@@ -55,7 +56,7 @@ installLib32 () {
 # Common Setup
 installCommon () {
 	printf "\n" &&
-	printf "${bold}${GRE}Installing common packages...${c0}\n" &&
+	printf "${bold}${GRE}Installing common packages for Ubuntu...${c0}\n" &&
 	printf "${bold}\n" &&
 	read -p "Press Enter to continue, Ctrl + C to abort." &&
 	printf "${c0}\n" &&
@@ -65,6 +66,27 @@ installCommon () {
 	sudo apt update &&
 	sudo apt full-upgrade &&
 	sudo apt install autoconf autoconf-archive automake autopoint autotools-dev beep binfmt-support build-essential cmake cpufrequtils cpuid cpustat cputool curl dconf-editor debhelper debian-keyring desktop-file-utils devhelp dh-autoreconf dh-make dh-strip-nondeterminism dkms docbook doc-base docutils-common elfutils exfat-fuse exo-utils fancontrol fdutils ffmpeg ffmpeg-doc ffmpegthumbnailer galternatives gimp gimp-data-extras gimp-help-en git git-gui gitk gmrun gnome-shell-extensions gnu-standards gpart gparted hardinfo hwloc i2c-tools icoutils intel-cmt-cat intel-gpu-tools iotop isag libcanberra-gtk-module libdrm-dev libdvdcss2 libfile-stripnondeterminism-perl libgtk-3-dev libhwloc-common libhwloc-dev libhwloc-plugins libi2c-dev libltdl-dev libmail-sendmail-perl libncurses5-dev libncursesw5-dev libportaudio2 libqt5opengl5 libqt5printsupport5 librrds-perl libsensor-msgs-dev libsensors-applet-plugin-dev libsensors4-dev libsigsegv2 libsys-hostname-long-perl libsystemd-dev libtool libudev-dev libvdpau-va-gl1 libvulkan-dev libvulkan1 libxml2-dev libxml2-utils lm-sensors lksctp-tools m4 meld menu menu-l10n mesa-utils mpv mtools numlockx openvpn overlay-scrollbar overlay-scrollbar-gtk2 p7zip-full po-debconf python3-docutils python3-oauth2client python3-pkg-resources python3-setuptools python3-tk python3-virtualenv qt5-image-formats-plugins qtwayland5 read-edid resolvconf rrdtool sl sndiod squashfs-tools squashfuse stress-ng stunnel4 sysstat tcl-tclreadline terminator texinfo thunar thunar-archive-plugin thunar-media-tags-plugin tk tree tumbler-plugins-extra ubuntu-restricted-addons ubuntu-restricted-extras ubuntu-sounds unrar v86d vainfo vdpau-driver-all vdpauinfo virtualenv vlc wget x11-utils xfce4-settings xsensors xz-utils zstd libsecret* &&
+
+	sudo dpkg-reconfigure libdvd-pkg &&
+	
+	printf "\n" &&
+	printf "${GRE}Done!\n" &&
+	tput sgr0
+}
+
+# Common Setup for Debian
+installCommonDebian () {
+	printf "\n" &&
+	printf "${bold}${GRE}Installing common packages for Debian...${c0}\n" &&
+	printf "${bold}\n" &&
+	read -p "Press Enter to continue, Ctrl + C to abort." &&
+	printf "${c0}\n" &&
+	tput sgr0 &&
+	
+	cd &&
+	sudo apt update &&
+	sudo apt full-upgrade &&
+	sudo apt install autoconf autoconf-archive automake autopoint autotools-dev beep binfmt-support build-essential cmake cpufrequtils cpuid cpustat cputool curl dconf-editor debhelper debian-keyring desktop-file-utils devhelp dh-autoreconf dh-make dh-strip-nondeterminism dkms docbook doc-base docutils-common elfutils exfat-fuse exo-utils fancontrol fdutils ffmpeg ffmpeg-doc ffmpegthumbnailer galternatives gimp gimp-data-extras gimp-help-en git git-gui gitk gmrun gnome-shell-extensions gnu-standards gpart gparted hardinfo hwloc i2c-tools icoutils intel-cmt-cat intel-gpu-tools iotop isag libcanberra-gtk-module libdrm-dev libdvdcss2 libfile-stripnondeterminism-perl libgtk-3-dev libhwloc-common libhwloc-dev libhwloc-plugins libi2c-dev libltdl-dev libmail-sendmail-perl libncurses5-dev libncursesw5-dev libportaudio2 libqt5opengl5 libqt5printsupport5 librrds-perl libsensor-msgs-dev libsensors-applet-plugin-dev libsensors4-dev libsigsegv2 libsys-hostname-long-perl libsystemd-dev libtool libudev-dev libvdpau-va-gl1 libvulkan-dev libvulkan1 libxml2-dev libxml2-utils lm-sensors lksctp-tools m4 meld menu menu-l10n mesa-utils mpv mtools numlockx openvpn overlay-scrollbar overlay-scrollbar-gtk2 p7zip-full po-debconf python3-docutils python3-oauth2client python3-pkg-resources python3-setuptools python3-tk python3-virtualenv qt5-image-formats-plugins qtwayland5 read-edid resolvconf rrdtool sl sndiod squashfs-tools squashfuse stress-ng stunnel4 sysstat tcl-tclreadline terminator texinfo thunar thunar-archive-plugin thunar-media-tags-plugin tk tree tumbler-plugins-extra libavcodec-extra libavcodec-extra59 ttf-mscorefonts-installer gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi unrar v86d vainfo vdpau-driver-all vdpauinfo virtualenv vlc wget x11-utils xfce4-settings xsensors xz-utils zstd libsecret* &&
 
 	sudo dpkg-reconfigure libdvd-pkg &&
 	
@@ -83,7 +105,7 @@ installXenial () {
 	tput sgr0 &&
 	
 	cd &&
-	sudo apt install python-docutils python-setuptools python-smbus gksu dconf-tools exfat-utils gnome-tweak-tool inteltool rarian-compat vdpau-va-driver libatk-adaptor libgail-common libatk-bridge2.0-0 vulkan-utils gnome-mime-data libexo-1-dev libvte9 &&
+	sudo apt install python2-dev python-docutils python-setuptools python-smbus gksu dconf-tools exfat-utils gnome-tweak-tool inteltool rarian-compat vdpau-va-driver libatk-adaptor libgail-common libatk-bridge2.0-0 vulkan-utils gnome-mime-data libexo-1-dev libvte9 &&
 	
 	printf "\n" &&
 	printf "${GRE}Done!\n" &&
@@ -101,7 +123,7 @@ installBionic () {
 	tput sgr0 &&
 	
 	cd &&
-	sudo apt install python-docutils python-setuptools python-smbus python3-smbus i965-va-driver-shaders dconf-tools exfat-utils gnome-tweak-tool inteltool rarian-compat vdpau-va-driver libatk-adaptor libgail-common gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-utils libarchive-cpio-perl gnome-mime-data sse3-support libexo-1-dev libexo-2-dev libvte9 libu2f-udev &&
+	sudo apt install python2 python2-dev python2.7-dev python2-minimal python2-pip-whl python2-setuptools-whl python-docutils python-setuptools python-smbus python3-smbus i965-va-driver-shaders dconf-tools exfat-utils gnome-tweak-tool inteltool rarian-compat vdpau-va-driver libatk-adaptor libgail-common gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-utils libarchive-cpio-perl gnome-mime-data sse3-support libexo-1-dev libexo-2-dev libvte9 libu2f-udev &&
 	
 	printf "\n" &&
 	printf "${GRE}Done!\n" &&
@@ -119,7 +141,7 @@ installFocal () {
 	tput sgr0 &&
 	
 	cd &&
-	sudo apt install intel-media-va-driver-non-free libappimage0 libappimage-dev exfat-utils mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-1-dev libexo-2-dev libvte9 libu2f-udev &&
+	sudo apt install intel-media-va-driver-non-free libappimage0 libappimage-dev exfat-utils mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-1-dev libexo-2-dev libvte9 libu2f-udev python2 python2-dev python2.7-dev python2-minimal python2-pip-whl python2-setuptools-whl &&
 	
 	printf "\n" &&
 	printf "${GRE}Done!\n" &&
@@ -137,7 +159,7 @@ installJammy () {
 	tput sgr0 &&
 	
 	cd &&
-	sudo apt install intel-media-va-driver-non-free libappimage0 libappimage-dev exfatprogs mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-2-dev libvte9 libu2f-udev &&
+	sudo apt install intel-media-va-driver-non-free libappimage0 libappimage-dev exfatprogs mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-2-dev libvte9 libu2f-udev python2 python2-dev python2.7-dev python2-minimal python2-pip-whl python2-setuptools-whl &&
 	
 	printf "\n" &&
 	printf "${GRE}Done!\n" &&
@@ -155,7 +177,25 @@ installLunar () {
 	tput sgr0 &&
 	
 	cd &&
-	sudo apt install intel-media-va-driver-non-free libappimage1.0abi1 libappimage-dev exfatprogs mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-2-dev libvte-2.91-0 libu2f-udev &&
+	sudo apt install intel-media-va-driver-non-free libappimage1.0abi1 libappimage-dev exfatprogs mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-2-dev libvte-2.91-0 libu2f-udev python2 python2-dev python2.7-dev python2-minimal python2-pip-whl python2-setuptools-whl &&
+	
+	printf "\n" &&
+	printf "${GRE}Done!\n" &&
+	printf "\n" &&
+	tput sgr0
+}
+
+# --debian
+installDebian () {
+	printf "\n" &&
+	printf "${bold}${GRE}Installing specific packages for Debian 12.1, Codename \"Bookworm\".${c0}\n" &&
+	printf "${bold}\n" &&
+	read -p "Press Enter to continue, Ctrl + C to abort." &&
+	printf "${c0}\n" &&
+	tput sgr0 &&
+	
+	cd &&
+	sudo apt install intel-media-va-driver-non-free libappimage1.0abi1 libappimage-dev exfatprogs mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-2-dev libvte-2.91-0 libu2f-udev python2 python2-dev python2.7-dev python2-minimal python2-pip-whl python2-setuptools-whl &&
 	
 	printf "\n" &&
 	printf "${GRE}Done!\n" &&
@@ -227,6 +267,10 @@ esac
 
 case $1 in
 	--lunar) installCommon; installLunar; postInstall; exit 0;;
+esac
+
+case $1 in
+	--debian) installCommonDebian; installDebian; postInstall; exit 0;;
 esac
 
 case $1 in
