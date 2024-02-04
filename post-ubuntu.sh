@@ -123,7 +123,7 @@ installBionic () {
 	tput sgr0 &&
 	
 	cd &&
-	sudo apt install python2 python2-dev python2.7-dev python2-minimal python2-pip-whl python2-setuptools-whl python-docutils python-setuptools python-smbus python3-smbus i965-va-driver-shaders dconf-tools exfat-utils gnome-tweak-tool inteltool rarian-compat vdpau-va-driver libatk-adaptor libgail-common gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-utils libarchive-cpio-perl gnome-mime-data sse3-support libexo-1-dev libexo-2-dev libvte9 libu2f-udev &&
+	sudo apt install python python-dev python2.7-dev python-minimal python-pip-whl python-setuptools-git python-docutils python-setuptools python-smbus python3-smbus i965-va-driver-shaders dconf-tools exfat-utils gnome-tweak-tool inteltool rarian-compat vdpau-va-driver libatk-adaptor libgail-common gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-utils libarchive-cpio-perl gnome-mime-data sse3-support libexo-1-dev libexo-2-dev libvte9 libu2f-udev &&
 	
 	printf "\n" &&
 	printf "${GRE}Done!\n" &&
