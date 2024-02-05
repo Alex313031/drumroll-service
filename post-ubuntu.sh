@@ -123,7 +123,7 @@ installBionic () {
 	tput sgr0 &&
 	
 	cd &&
-	sudo apt install python python-dev python2.7-dev python-minimal python-pip-whl python-setuptools-git python-docutils python-setuptools python-smbus python3-smbus i965-va-driver-shaders dconf-tools exfat-utils gnome-tweak-tool inteltool rarian-compat vdpau-va-driver libatk-adaptor libgail-common gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-utils libarchive-cpio-perl gnome-mime-data sse3-support libexo-1-dev libexo-2-dev libvte9 libu2f-udev &&
+	sudo apt install python python-dev python2.7-dev python-minimal python-pip-whl python-setuptools-git python-docutils python-setuptools python-smbus python3-smbus i965-va-driver-shaders dconf-tools exfat-utils gnome-tweak-tool inteltool rarian-compat vdpau-va-driver libatk-adaptor libgail-common gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-utils libarchive-cpio-perl gnome-mime-data sse3-support libexo-1-dev libexo-2-dev libvte9 libu2f-udev gstreamer1.0-plugins-bad &&
 	
 	printf "\n" &&
 	printf "${GRE}Done!\n" &&
@@ -141,7 +141,7 @@ installFocal () {
 	tput sgr0 &&
 	
 	cd &&
-	sudo apt install intel-media-va-driver-non-free libappimage0 libappimage-dev exfat-utils mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-1-dev libexo-2-dev libvte9 libu2f-udev python2 python2-dev python2.7-dev python2-minimal python2-pip-whl python2-setuptools-whl &&
+	sudo apt install intel-media-va-driver-non-free libappimage0 libappimage-dev exfat-utils mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-1-dev libexo-2-dev libvte9 libu2f-udev python2 python2-dev python2.7-dev python2-minimal python2-pip-whl python2-setuptools-whl gstreamer1.0-plugins-bad &&
 	
 	printf "\n" &&
 	printf "${GRE}Done!\n" &&
@@ -159,7 +159,7 @@ installJammy () {
 	tput sgr0 &&
 	
 	cd &&
-	sudo apt install intel-media-va-driver-non-free libappimage0 libappimage-dev exfatprogs mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-2-dev libvte9 libu2f-udev python2 python2-dev python2.7-dev python2-minimal python2-pip-whl python2-setuptools-whl &&
+	sudo apt install intel-media-va-driver-non-free libappimage0 libappimage-dev exfatprogs mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-2-dev libvte9 libu2f-udev python2 python2-dev python2.7-dev python2-minimal python2-pip-whl python2-setuptools-whl gstreamer1.0-plugins-bad &&
 	
 	printf "\n" &&
 	printf "${GRE}Done!\n" &&
@@ -177,7 +177,7 @@ installLunar () {
 	tput sgr0 &&
 	
 	cd &&
-	sudo apt install intel-media-va-driver-non-free libappimage1.0abi1 libappimage-dev exfatprogs mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-2-dev libvte-2.91-0 libu2f-udev python2 python2-dev python2.7-dev python2-minimal python2-pip-whl python2-setuptools-whl &&
+	sudo apt install intel-media-va-driver-non-free libappimage1.0abi1 libappimage-dev exfatprogs mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-2-dev libvte-2.91-0 libu2f-udev python2 python2-dev python2.7-dev python2-minimal python2-pip-whl python2-setuptools-whl gstreamer1.0-plugins-bad &&
 	
 	printf "\n" &&
 	printf "${GRE}Done!\n" &&
@@ -195,7 +195,7 @@ installDebian () {
 	tput sgr0 &&
 	
 	cd &&
-	sudo apt install intel-media-va-driver-non-free libappimage1.0abi1 libappimage-dev exfatprogs mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-2-dev libvte-2.91-0 libu2f-udev python2 python2-dev python2.7-dev python2-minimal python2-pip-whl python2-setuptools-whl &&
+	sudo apt install intel-media-va-driver-non-free libappimage1.0abi1 libappimage-dev exfatprogs mesa-va-drivers python3-smbus i965-va-driver-shaders gnome-tweaks qt5-qmltooling-plugins neofetch vulkan-tools libarchive-cpio-perl sse3-support libexo-2-dev libvte-2.91-0 libu2f-udev python2 python2-dev python2.7-dev python2-minimal python2-pip-whl python2-setuptools-whl gstreamer1.0-plugins-bad &&
 	
 	printf "\n" &&
 	printf "${GRE}Done!\n" &&
