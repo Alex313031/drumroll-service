@@ -109,7 +109,7 @@ installXenial () {
 	tput sgr0 &&
 	
 	cd &&
-	sudo apt install python2-dev python-docutils python-setuptools python-smbus gksu dconf-tools exfat-utils gnome-tweak-tool inteltool rarian-compat vdpau-va-driver libatk-adaptor libgail-common libatk-bridge2.0-0 vulkan-utils gnome-mime-data libexo-1-dev libvte9 libwebp5 libwebp-dev webp &&
+	sudo apt install python2.7 python2.7-minimal python2.7-dev python-docutils python-setuptools python-smbus gksu dconf-tools exfat-utils gnome-tweak-tool inteltool rarian-compat vdpau-va-driver libatk-adaptor libgail-common libatk-bridge2.0-0 vulkan-utils gnome-mime-data libexo-1-dev libvte9 libwebp5 libwebp-dev webp &&
 	
 	printf "\n" &&
 	printf "${GRE}Done!\n" &&
