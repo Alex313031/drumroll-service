@@ -46,7 +46,11 @@ installLib32 () {
 	cd &&
 	sudo dpkg --add-architecture i386 &&
 	sudo apt update &&
-	
+
+	printf "\n" &&	
+	printf "${GRE}Added foreign architecture: " &&
+	sudo dpkg --print-foreign-architectures &&
+
 	printf "\n" &&	
 	printf "${GRE}Done! ${YEL}You can now run this script again for your Ubuntu version.\n"
 	printf "\n" &&
