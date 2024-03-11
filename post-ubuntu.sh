@@ -27,8 +27,8 @@ displayHelp () {
 	printf "${bold}${YEL}  --bionic | Ubuntu 18.04, Codename \"Bionic Beaver\"${c0}\n" &&
 	printf "${bold}${YEL}  --focal  | Ubuntu 20.04, Codename \"Focal Fossa\"${c0}\n" &&
 	printf "${bold}${YEL}  --jammy  | Ubuntu 22.04, Codename \"Jammy Jellyfish\"${c0}\n" &&
-	printf "${bold}${YEL}  --lunar (Ubuntu 23.04, Codename \"Lunar Lobster\".${c0}\n" &&
-	printf "${bold}${YEL}  --debian (Debian 12.1, Codename \"Bookworm\".${c0}\n" &&
+	printf "${bold}${YEL}  --lunar  | Ubuntu 23.04, Codename \"Lunar Lobster\".${c0}\n" &&
+	printf "${bold}${YEL}  --debian | Debian 12.1, Codename \"Bookworm\".${c0}\n" &&
 	printf "\n"
 }
 
@@ -291,8 +291,8 @@ printf "${bold}${YEL}  --xenial | Ubuntu 16.04, Codename \"Xenial Xerus\"${c0}\n
 printf "${bold}${YEL}  --bionic | Ubuntu 18.04, Codename \"Bionic Beaver\"${c0}\n" &&
 printf "${bold}${YEL}  --focal  | Ubuntu 20.04, Codename \"Focal Fossa\"${c0}\n" &&
 printf "${bold}${YEL}  --jammy  | Ubuntu 22.04, Codename \"Jammy Jellyfish\"${c0}\n" &&
-printf "${bold}${YEL}  --lunar (Ubuntu 23.04, Codename \"Lunar Lobster\".${c0}\n" &&
-printf "${bold}${YEL}  --debian (Debian 12.1, Codename \"Bookworm\".${c0}\n" &&
+printf "${bold}${YEL}  --lunar  | Ubuntu 23.04, Codename \"Lunar Lobster\".${c0}\n" &&
+printf "${bold}${YEL}  --debian | Debian 12.1, Codename \"Bookworm\".${c0}\n" &&
 printf "\n"
 
 exit 0
